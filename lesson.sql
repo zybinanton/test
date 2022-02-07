@@ -1,0 +1,11 @@
+drop table IF EXISTS students;
+CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY AUTOINCREMENT,name varchar(20), lastname varchar(30) DEFAULT tyty, `group` varchar(20), birnDate DATE, age tinyint);
+INSERT INTO `students` VALUES(NULL, "Nikolay", "Kaliushnuy", "PYTHON11", "1993-08-24", "15");
+INSERT INTO `students` VALUES(NULL, "Nikola", "Kaliushnu", "PYTHON13", "1993-08-24", "23");
+INSERT INTO `students` VALUES(NULL, "Nikol", "Kaliushn", "PYTHON11", "1993-08-24", "34");
+INSERT INTO `students` VALUES(NULL, "Niko", "Kaliush", "PYTHON77", "1993-08-24", "42");
+INSERT INTO `students`(name) VALUES("Nikolay");
+-- SELECT * FROM `students` WHERE `group` == "PYTHON11" AND `age` > 25;
+-- SELECT * FROM `students` WHERE `group` > 0 AND `name` LIKE "%ol%" ORDER BY `group` DESC LIMIT 2;
+-- SELECT SUM(`age`) as "сумма", AVG(`age`) as "ср.зн." FROM `students`;
+SELECT `group` FROM `students` GROUP BY `group`;
